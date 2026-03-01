@@ -3,16 +3,28 @@
 <head>
   <title>DiceRoll!</title>
   <style>
-    body {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      font-family: "Courier New", monospace;
-      color: #4a90e2;
-    }
+   body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  background: white;
+  font-family: "Courier New", monospace;
+  color: #4a90e2;
+  margin: 0; 
+}
+
+    .banner {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #4a90e2; /* Blue background */
+  color: white;               /* White text */
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
    .dice {
   width: 200px;
@@ -83,10 +95,10 @@
   </style>
 </head>
 <body>
+<div class="banner">
+   ROLL THE DICE
+  </div>
 
-  <p>HELLO. TYPING WORDS HERE. </p>
-  <p></p>
-<p></p>
   <div class="dice" id="dice">?</div>
   <button onclick="rollD100()">ROLL</button>
 
