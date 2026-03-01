@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D100 Roller</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Courier New", monospace;
+      background-color: black;
+      color: lime;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: lime;
+      color: black;
+      border: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>D100</h1>
+  <div id="result">Roll the die.</div>
+  <button onclick="rollD100()">ROLL</button>
+
+  <script>
+    function rollD100() {
+      let roll = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("result").innerText = "You rolled: " + roll;
+
+      let specialNumbers = [11,22,33,44,55,66,77,88,99,100];
+
+      if (specialNumbers.includes(roll)) {
+        window.location.href = "https://example.com"; // ← replace with your target URL
+      }
+    }
+  </script>
+
+</body>
+</html>
