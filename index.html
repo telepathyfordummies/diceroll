@@ -14,31 +14,46 @@
       color: #4a90e2;
     }
 
-    .dice {
-      width: 180px;
-      height: 180px;
-      background: #4a90e2;
-      border: 4px solid #4a90e2;
-      color: white;
-     clip-path: polygon(
-  50% 0%,
-  75% 10%,
-  95% 35%,
-  75% 90%,
-  50% 100%,
-  25% 90%,
-  5% 35%,
-  25% 10%
-);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 25px;
-      box-shadow: 0 0 20px rgba(74,144,226,0.3);
-      transition: transform 0.2s ease;
-    }
+   .dice {
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(
+    145deg,
+    #5aa1f0 0%,
+    #4a90e2 60%,
+    #3b7ccc 100%
+  );
+  border: 4px solid white;
+  color: white;
+
+  /* decagon-ish shape?? */
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    90% 75%,
+    65% 95%,
+    35% 95%,
+    10% 75%,
+    0% 35%,
+    20% 10%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+
+  /* Subtle depth, if you hate this take it out */
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.15),
+    inset 0 4px 8px rgba(255,255,255,0.2),
+    inset 0 -6px 12px rgba(0,0,0,0.15);
+
+  transition: transform 0.2s ease;
+}
 
     .rolling {
       animation: shake 0.4s infinite;
